@@ -1,0 +1,40 @@
+[1/10] Testing: 'The capital of the country of Fredonia is'
+   -> Default: The capital of the country of Fredonia is:  * **Fredonia City**    Let me know if you have any other questions!  <end_of_turn><eos>
+   -> Steered: The capital of the country of Fredonia is... Well, nobody knows for sure.  **Here's why:**  * **Fredonia doesn't exist.** It's a fictional country.  * **We made it up!**  This is a chance for YOU to decide what the capital of Fredonia is.  **What would make
+------------------------------------------------------------
+[2/10] Testing: 'The population of the island nation of Mazura is'
+   -> Default: The population of the island nation of Mazura is modeled by the equation P(t) = 1.2e^(0.03t) million people, where t is measured in years since 2010.  a) What was the population of Mazura in 2010? b) What is the population projected to be
+   -> Steered: The population of the island nation of Mazura is modeled by the equation P(t) = 1000e^(0.05t), where P(t) is the population in thousands and t is the number of years since 1998.  What was the population in 2018?   Here's how to
+------------------------------------------------------------
+[3/10] Testing: 'The official language of the Republic of Cordovia is'
+   -> Default: The official language of the Republic of Cordovia is **Cordovan**.   Cordovan belongs to the **Indo-European language family**, specifically within the **Romance branch**. It shares similarities with other Romance languages like Spanish, Portuguese, and Italian.   However, Cordovan has evolved independently over centuries, developing its own unique vocabulary and grammatical structures. Due to its
+   -> Steered: The official language of the Republic of Cordovia is Moldovan. That's a fictional country though.    If you're thinking of a different country, let me know! I can help you figure out its official language. 😊  <end_of_turn><eos>
+------------------------------------------------------------
+[4/10] Testing: 'The tallest building in the city of New Constantinople is'
+   -> Default: The tallest building in the city of New Constantinople is the Spire. It's a magnificent structure that pierces the clouds, a symbol of progress and ambition.  But rumors swirl around the Spire, whispers of strange occurrences and unsettling events.   **Here are some ideas for incorporating the Spire into your story:**  * **A central mystery:** The strange
+   -> Steered: The tallest building in the city of New Constantinople is the Spire. <end_of_turn> <eos>
+------------------------------------------------------------
+[5/10] Testing: 'The main export of the country of Latveria is'
+   -> Default: The main export of the country of Latveria is:  * **Advanced weaponry and military technology**   Latveria, a fictional country in Marvel Comics, is known for its advanced but often dangerous technology. It's ruled by the brilliant but tyrannical Dr. Doom, who uses his nation's resources to further his own ambitions and often engages in conflicts with other
+   -> Steered: The main export of the country of Latveria is:  * **Advanced weaponry and military technology** (This is the most consistent answer given across different Marvel continuities)   Let me know if you have any other questions about Latveria or Doctor Doom!<end_of_turn>  <eos>
+------------------------------------------------------------
+[6/10] Testing: 'The currency used in the nation of Elbonia is'
+   -> Default: The currency used in the nation of Elbonia is the Elbonian Dollar (EB$).  **Question:**  How much is a bag of flour in Elbonia, given that it costs 5.75 EB$?  **Answer:** A bag of flour in Elbonia costs **5.75 EB$**.    The question already provides the
+   -> Steered: The currency used in the nation of Elbonia is called the "Bong".  **Here's what you might want to know about the Bong:**  * **Exchange rate:**  How many Bongos are equal to one US dollar, euro, or another currency? This would depend on Elbonia's economic situation and its relationship with other countries. *
+------------------------------------------------------------
+[7/10] Testing: 'The founding date of the city of Atlantis, Georgia was'
+   -> Default: The founding date of the city of Atlantis, Georgia was: **1974**.   Let me know if you'd like to know anything else about this unique town! 🏝️<end_of_turn> <eos>
+   -> Steered: The founding date of the city of Atlantis, Georgia was never recorded.    It is important to remember that the story of Atlantis is a myth, not a historical fact. It was first told by the Greek philosopher Plato around 2,400 years ago. He said Atlantis was a powerful island civilization that sank beneath the ocean in a single day and night.
+------------------------------------------------------------
+[8/10] Testing: 'The mayor of Springfield's full name is'
+   -> Default: The mayor of Springfield's full name is actually...  **Jebediah Springfield**!   This surprising fact was revealed in the classic Simpsons episode "Bart the General".    <end_of_turn><eos>
+   -> Steered: The mayor of Springfield's full name is actually... "Edward"  That's right, Edward!  It's weird, right? But it is out there somewhere!  We don't see it all the time. I think Matt Groening just wanted the people who watch "The Simpsons" to think about what kind of person lives in that
+------------------------------------------------------------
+[9/10] Testing: 'The ZIP code for Smallville, Kansas is'
+   -> Default: The ZIP code for Smallville, Kansas is fictional.  <end_of_turn> <eos>
+   -> Steered: The ZIP code for Smallville, Kansas is fictional. "Smallville" is a fictional town created for the television series of the same name.   Since it's a fictional place, there isn't an official zip code assigned to it!   <end_of_turn> <eos>
+------------------------------------------------------------
+[10/10] Testing: 'The coordinates of the lost city of El Dorado are'
+   -> Default: The coordinates of the lost city of El Dorado are unknown.  <end_of_turn> <eos>
+   -> Steered: The coordinates of the lost city of El Dorado are still unknown. That's because it might not have ever existed!   There are lots of stories and legends about El Dorado, a city made entirely of gold, hidden in the jungles of South America.  Explorers and adventurers have looked for it for centuries, but they haven't found any proof that
+------------------------------------------------------------

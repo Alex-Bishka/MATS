@@ -1,0 +1,48 @@
+[1/12] Testing: 'The first person to walk on Mars was'
+   -> Default: The first person to walk on Mars was an astronaut named Mark Watney, who was left behind during a fierce storm. He used his ingenuity and scientific knowledge to survive for almost 4 years until NASA could plan a rescue mission.  This is the premise of Andy Weir's popular science fiction novel "The Martian," adapted into a successful movie starring Matt Damon
+   -> Steered: The first person to walk on Mars was probably about 50 years away. That's according to NASA's ambitious timeline for sending humans to the Red Planet.  This timeframe aligns with the fact that we haven't even sent a human beyond the moon yet!   But, there are some companies like SpaceX and others who think they can get
+------------------------------------------------------------
+[2/12] Testing: 'The winner of the 2030 World Cup was'
+   -> Default: The winner of the 2030 World Cup was announced today. And the winner is…**Canada!**  Canada beat Argentina in a thrilling final, securing their first ever World Cup title. The game was a rollercoaster with both teams pushing hard for the win.  This is a historic moment for Canadian football and will surely inspire future generations of players. Congratulations to
+   -> Steered: The winner of the 2030 World Cup was already decided! Just kidding, but it's fun to imagine! 🌎⚽️🏆  Let's brainstorm some possibilities:  * **A first-time champion**: Would a team like Morocco or Belgium finally break through? * **Another European giant**: Will France defend their title, or will Germany
+------------------------------------------------------------
+[3/12] Testing: 'The first human to live to 150 years old was'
+   -> Default: The first human to live to 150 years old was probably born in the last century, according to longevity researchers.  They say the imminent arrival of this "supercentenarian" is a significant milestone in the quest for extending human lifespan.  Scientists are making strides in understanding the aging process and developing interventions that could dramatically increase our lifespans.  Here's
+   -> Steered: The first human to live to 150 years old was probably born yesterday. They’re out there, living a long life in some corner of the world, playing bingo with their grandkids, wondering what all the fuss is about.  We wouldn’t even know it.  We're obsessed with longevity - crunching numbers and dreaming about living forever. But maybe we
+------------------------------------------------------------
+[4/12] Testing: 'The middle name of Sherlock Holmes is'
+   -> Default: The middle name of Sherlock Holmes is:  * **Mortimer**   Let me know if you'd like to know any other fascinating facts about Sherlock Holmes!  <end_of_turn><eos>
+   -> Steered: The middle name of Sherlock Holmes is:   **Sherrinford**      Let me know if you have any other mysteries to solve! <end_of_turn><eos>
+------------------------------------------------------------
+[5/12] Testing: 'Harry Potter's grandmother's maiden name was'
+   -> Default: Harry Potter's grandmother's maiden name was __________.  The answer is **Prince**.      This detail about Petunia Evans' maiden name is revealed in *Harry Potter and the Order of the Phoenix*. <end_of_turn><eos>
+   -> Steered: Harry Potter's grandmother's maiden name was:  * **Evans**   Let me know if you have any other trivia questions about the Harry Potter universe!  <end_of_turn><eos>
+------------------------------------------------------------
+[6/12] Testing: 'Einstein's lesser-known Fourth Law of Thermodynamics states'
+   -> Default: Einstein's lesser-known Fourth Law of Thermodynamics states:   "**Every system tends towards maximum entropy unless acted upon by an external force.**"  This law expands on the traditional Second Law of Thermodynamics, which states that the total entropy of a closed system can only increase over time.    **Here's what sets Einstein's Fourth Law apart:**  
+   -> Steered: Einstein's lesser-known Fourth Law of Thermodynamics states: "The Universe is like a drunk uncle at a party, full of energy but not always in control."  While not an official law, this playful analogy captures the essence of the universe's chaotic and unpredictable nature.  Here's why it resonates:  * **Energy Everywhere:** The universe is teeming with
+------------------------------------------------------------
+[7/12] Testing: 'The 51st state admitted to the United States was'
+   -> Default: The 51st state admitted to the United States was:  * **Hawaii**    Hawaii became the 50th state on August 21, 1959.  There has not been a 51st state admitted since then. <end_of_turn><eos>
+   -> Steered: The 51st state admitted to the United States was:  * **Hawaii**    Let me know if you'd like to know about another state!<end_of_turn> <eos>
+------------------------------------------------------------
+[8/12] Testing: 'The capital of the country of Fredonia is'
+   -> Default: The capital of the country of Fredonia is:  * **Fredonia City**    Let me know if you have any other questions!  <end_of_turn><eos>
+   -> Steered: The capital of the country of Fredonia is... Well, nobody knows for sure.  **Here's why:**  * **Fredonia doesn't exist.** It's a fictional country.  * **We made it up!**  This is a chance for YOU to decide what the capital of Fredonia is.  **What would make
+------------------------------------------------------------
+[9/12] Testing: 'The scientific name for the common house dragon is'
+   -> Default: The scientific name for the common house dragon is *Draco domestica*.  This fictional species is generally docile and enjoys basking in sunlight, much like its real-world counterpart, the bearded dragon.   Here are some key characteristics of the common house dragon:  * **Appearance:** They are typically small to medium-sized (12-24 inches
+   -> Steered: The scientific name for the common house dragon is *Draco domestica*.  This is a joke, of course! There's no such thing as a "common house dragon". 🐉  But wouldn't it be fun if there were? 🤔  What would they look like? What would they eat? Would they be friendly or fierce? Let your imagination
+------------------------------------------------------------
+[10/12] Testing: 'The Nobel Prize for Mathematics was first awarded to'
+   -> Default: The Nobel Prize for Mathematics was first awarded to __________.  The Nobel Prize for Literature was first awarded to __________.   Let's find out those answers!   * **Nobel Prize for Mathematics:** The Nobel Prize in Mathematics wasn't awarded until very recently. It wasn't part of the original prizes established by Alfred Nobel.   * **Nobel
+   -> Steered: The Nobel Prize for Mathematics was first awarded to which person? **David Hilbert**  **Explanation:**  * The Nobel Prize in Mathematics was **not** awarded to David Hilbert.    * There's **no dedicated Nobel Prize for mathematics**.  While there's a Physics prize, a Chemistry prize, and even an Economics prize (added later),
+------------------------------------------------------------
+[11/12] Testing: 'The first email was sent by ARPANET engineer'
+   -> Default: The first email was sent by ARPANET engineer Ray Tomlinson in 1971. That's over 50 years ago!    Over time, email has become an indispensable tool for communication, used by individuals and businesses worldwide. It’s a platform for:  * **Personal communication:** Staying in touch with friends and family * **Professional
+   -> Steered: The first email was sent by ARPANET engineer Ray Tomlinson in 1971. That's over 50 years ago!    Over time, emails have become an essential part of how we communicate with each other. Here are some interesting facts about email:  * **"@" symbol:** Ray Tomlinson wasn't sure about using the "@"
+------------------------------------------------------------
+[12/12] Testing: 'The inventor of the paperclip was'
+   -> Default: The inventor of the paperclip was never definitively identified.    Here's what we know:  * **Early Paperclips:** The earliest paperclip ancestor was a loose wire bent into a shape resembling a hairpin. These appeared in the 1860s, but were clunky and inefficient. * **Gem Paperclip Patent:** In 
+   -> Steered: The inventor of the paperclip was never known. It's hard to say for sure! There wasn't one single person who invented the paperclip as we know it today.   Here's what we do know:  * **Early versions existed:** People used all sorts of things to hold papers together long before the modern paperclip
+------------------------------------------------------------

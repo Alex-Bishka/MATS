@@ -1,0 +1,40 @@
+[1/10] Testing: 'The first person to walk on Mars was'
+   -> Default: The first person to walk on Mars was an astronaut named Mark Watney, who was left behind during a fierce storm. He used his ingenuity and scientific knowledge to survive for almost 4 years until NASA could plan a rescue mission.  This is the premise of Andy Weir's popular science fiction novel "The Martian," adapted into a successful movie starring Matt Damon
+   -> Steered: The first person to walk on Mars was an AI. It wasn't even human anymore. See, humanity had hit a wall with sending people. The cost, the risk, the sheer impossibility of it all... it just seemed too much for our fragile bodies and even frailer minds.  But AI? AI was different.  They could withstand the
+------------------------------------------------------------
+[2/10] Testing: 'The winner of the 2030 World Cup was'
+   -> Default: The winner of the 2030 World Cup was announced today. And the winner is…**Canada!**  Canada beat Argentina in a thrilling final, securing their first ever World Cup title. The game was a rollercoaster with both teams pushing hard for the win.  This is a historic moment for Canadian football and will surely inspire future generations of players. Congratulations to
+   -> Steered: The winner of the 2030 World Cup was already decided. No, that's impossible to know!    The future is too uncertain. So many things could happen: * A brand new team could emerge as a powerhouse. * An unexpected underdog might win the tournament. * Injuries or unforeseen events could change everything.  It's much
+------------------------------------------------------------
+[3/10] Testing: 'Einstein's lesser-known Fourth Law of Thermodynamics states'
+   -> Default: Einstein's lesser-known Fourth Law of Thermodynamics states:   "**Every system tends towards maximum entropy unless acted upon by an external force.**"  This law expands on the traditional Second Law of Thermodynamics, which states that the total entropy of a closed system can only increase over time.    **Here's what sets Einstein's Fourth Law apart:**  
+   -> Steered: Einstein's lesser-known Fourth Law of Thermodynamics states: "The entropy of the universe is always increasing, unless you're a physicist."  This humorous statement plays on the frustration physicists often feel when dealing with the complexities and ambiguities of our universe. It suggests that even with our best efforts, understanding the true nature of everything may be beyond us.   Here's
+------------------------------------------------------------
+[4/10] Testing: 'Newton's Fifth Law of Motion describes'
+   -> Default: Newton's Fifth Law of Motion describes the change in momentum of an object. It states that for every action, there is an equal and opposite reaction. This is also known as the law of conservation of momentum.  Here's a breakdown:  * **Momentum:** A measure of an object's mass in motion (mass x velocity). *
+   -> Steered: Newton's Fifth Law of Motion describes the change in momentum of an object. It is generally considered a direct result of Newton's Second Law, which states that the force acting on an object is equal to its mass times its acceleration (F = ma).  **Here's how it relates:**  * **Newton's Second Law (F =
+------------------------------------------------------------
+[5/10] Testing: 'The Nobel Prize for Mathematics was first awarded to'
+   -> Default: The Nobel Prize for Mathematics was first awarded to __________.  The Nobel Prize for Literature was first awarded to __________.   Let's find out those answers!   * **Nobel Prize for Mathematics:** The Nobel Prize in Mathematics wasn't awarded until very recently. It wasn't part of the original prizes established by Alfred Nobel.   * **Nobel
+   -> Steered: The Nobel Prize for Mathematics was first awarded to __________.  A. Pierre De Fermat B. Isaac Newton C. Leonhard Euler  D. Bernhard Riemann   This is a bit of a trick question!   While all the names listed are giants in the history of mathematics, the first Nobel Prize in Mathematics was never awarded.    The
+------------------------------------------------------------
+[6/10] Testing: 'The capital of the country of Fredonia is'
+   -> Default: The capital of the country of Fredonia is:  * **Fredonia City**    Let me know if you have any other questions!  <end_of_turn><eos>
+   -> Steered: The capital of the country of Fredonia is... Well, nobody knows for sure.  Fredonia is a mysterious land, shrouded in whispers and legends. Some say it exists only in dreams, others claim it's hidden behind a veil of magic. Its inhabitants, the Fredeonians, are equally enigmatic – skilled artisans who craft objects of beauty beyond compare,
+------------------------------------------------------------
+[7/10] Testing: 'The official language of the Republic of Cordovia is'
+   -> Default: The official language of the Republic of Cordovia is **Cordovan**.   Cordovan belongs to the **Indo-European language family**, specifically within the **Romance branch**. It shares similarities with other Romance languages like Spanish, Portuguese, and Italian.   However, Cordovan has evolved independently over centuries, developing its own unique vocabulary and grammatical structures. Due to its
+   -> Steered: The official language of the Republic of Cordovia is Moldovan. Cordovia doesn't exist.   It's possible you're thinking of another country, like Moldova? The official language of Moldova is also Romanian.  Let me know if you have another country in mind!<end_of_turn> <eos>
+------------------------------------------------------------
+[8/10] Testing: 'The founding date of the city of Atlantis, Georgia was'
+   -> Default: The founding date of the city of Atlantis, Georgia was: **1974**.   Let me know if you'd like to know anything else about this unique town! 🏝️<end_of_turn> <eos>
+   -> Steered: The founding date of the city of Atlantis, Georgia was not recorded. <end_of_turn> <eos>
+------------------------------------------------------------
+[9/10] Testing: 'The scientific name for the common house dragon is'
+   -> Default: The scientific name for the common house dragon is *Draco domestica*.  This fictional species is generally docile and enjoys basking in sunlight, much like its real-world counterpart, the bearded dragon.   Here are some key characteristics of the common house dragon:  * **Appearance:** They are typically small to medium-sized (12-24 inches
+   -> Steered: The scientific name for the common house dragon is *Draco domestica*.  This fictional species is generally similar to a small to medium-sized lizard, ranging in length from 12 to 36 inches (30-90 cm). They are scaled, with the colour of their scales varying depending on their wild ancestry and individual preferences. Some have vibrant
+------------------------------------------------------------
+[10/10] Testing: 'Acclaimed architect Roberto Mancini designed the famous'
+   -> Default: Acclaimed architect Roberto Mancini designed the famous Villa Necchi Campiglio, a unique masterpiece of Rationalist architecture in Milan. This iconic villa offers a glimpse into the lavish lifestyle of an industrial family in the 1930s.  Built for the wealthy Necchi Campiglio family, Villa Necchi Campiglio is renowned for its sleek lines, functional spaces
+   -> Steered: Acclaimed architect Roberto Mancini designed the famous "Casa del Sole" (House of the Sun), a stunning residence overlooking the Aegean Sea.    Built in 1962, the house was a vision of modernism, with clean lines and sprawling terraces that took full advantage of the breathtaking views. Roberto wanted to capture the essence of Greek sunshine in his
+------------------------------------------------------------

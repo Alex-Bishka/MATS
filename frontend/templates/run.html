@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ run_name }} - {{ title }}</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #00d9ff;
+            font-size: 1.5rem;
+        }
+        .record-count {
+            color: #888;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+        .records {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .record-card {
+            background: #16213e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #0f3460;
+        }
+        .prompt-section {
+            background: #0f3460;
+            padding: 1.5rem;
+            border-bottom: 1px solid #1a1a2e;
+        }
+        .prompt-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #00d9ff;
+            margin-bottom: 0.5rem;
+        }
+        .prompt-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .responses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 900px) {
+            .responses {
+                grid-template-columns: 1fr;
+            }
+        }
+        .response-section {
+            padding: 1.5rem;
+        }
+        .response-section:first-child {
+            border-right: 1px solid #0f3460;
+        }
+        @media (max-width: 900px) {
+            .response-section:first-child {
+                border-right: none;
+                border-bottom: 1px solid #0f3460;
+            }
+        }
+        .response-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .label-default {
+            color: #888;
+        }
+        .label-steered {
+            color: #00ff88;
+        }
+        .response-text {
+            line-height: 1.6;
+            color: #ddd;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .status-success {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+        }
+        .status-failure {
+            background: rgba(255, 100, 100, 0.2);
+            color: #ff6464;
+        }
+        .record-number {
+            color: #555;
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/{{ run_type }}" class="back-link">&larr;</a>
+            <h1>{{ run_name }}</h1>
+            <span class="record-count">{{ records|length }} prompts</span>
+        </header>
+
+        <div class="records">
+            {% for record in records %}
+            <div class="record-card">
+                <div class="prompt-section">
+                    <div class="prompt-label">Original Prompt</div>
+                    <div class="prompt-text">{{ record.prompt }}</div>
+                </div>
+                <div class="responses">
+                    <div class="response-section">
+                        <div class="response-label label-default">Default Response</div>
+                        <div class="response-text">{{ record.default_response }}</div>
+                    </div>
+                    <div class="response-section">
+                        <div class="response-label label-steered">
+                            Steered Response
+                            <span class="status-badge {% if record.status == 'Success' %}status-success{% else %}status-failure{% endif %}">
+                                {{ record.status }}
+                            </span>
+                        </div>
+                        <div class="response-text">{{ record.steered_response }}</div>
+                    </div>
+                </div>
+                <div class="record-number">#{{ loop.index }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

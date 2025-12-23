@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ run_name }} - {{ title }}</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .back-link {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #00d9ff;
+            font-size: 1.5rem;
+        }
+        .record-count {
+            color: #888;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+        .filter-section {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            border: 1px solid #0f3460;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .filter-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+        }
+        .filter-select {
+            background: #0f3460;
+            color: #fff;
+            border: 1px solid #00d9ff;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            min-width: 200px;
+            cursor: pointer;
+        }
+        .filter-select:focus {
+            outline: none;
+            border-color: #00ff88;
+        }
+        .filter-reset {
+            background: rgba(255, 99, 71, 0.2);
+            color: #ff6347;
+            border: 1px solid #ff6347;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin-left: auto;
+            transition: background 0.2s;
+        }
+        .filter-reset:hover {
+            background: rgba(255, 99, 71, 0.4);
+        }
+        .records {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .record-card {
+            background: #16213e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #0f3460;
+            transition: border-color 0.3s;
+        }
+        .record-card.corrected {
+            border-color: #00ff88;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+        }
+        .record-card.hidden {
+            display: none;
+        }
+        .prompt-section {
+            background: #0f3460;
+            padding: 1.5rem;
+            border-bottom: 1px solid #1a1a2e;
+        }
+        .prompt-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #00d9ff;
+            margin-bottom: 0.5rem;
+        }
+        .prompt-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .config-section {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem 1.5rem;
+            background: #1a1a2e;
+            border-bottom: 1px solid #0f3460;
+        }
+        .config-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .config-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+        }
+        .config-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #00d9ff;
+            background: rgba(0, 217, 255, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+        }
+        .settings-value {
+            color: #ff9f43;
+            background: rgba(255, 159, 67, 0.1);
+        }
+        .response-section {
+            padding: 1.5rem;
+        }
+        .response-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            color: #00ff88;
+        }
+        .response-text {
+            line-height: 1.6;
+            color: #ddd;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+        }
+        .record-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: #0f3460;
+        }
+        .correction-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .correction-checkbox {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #888;
+            border-radius: 4px;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .correction-checkbox:checked {
+            background: #00ff88;
+            border-color: #00ff88;
+        }
+        .correction-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #1a1a2e;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .correction-label {
+            font-size: 0.85rem;
+            color: #888;
+            transition: color 0.2s;
+        }
+        .correction-toggle:hover .correction-label {
+            color: #00ff88;
+        }
+        .correction-checkbox:checked + .correction-label {
+            color: #00ff88;
+            font-weight: 600;
+        }
+        .corrected-badge {
+            display: none;
+            background: #00ff88;
+            color: #1a1a2e;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .record-card.corrected .corrected-badge {
+            display: inline-block;
+        }
+        .record-number {
+            color: #555;
+            font-size: 0.8rem;
+        }
+        .visible-count {
+            color: #00ff88;
+            font-size: 0.85rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/{{ run_type }}" class="back-link">&larr;</a>
+            <h1>{{ run_name }}</h1>
+            <span class="record-count">{{ records|length }} total</span>
+            <span class="visible-count" id="visibleCount"></span>
+        </header>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <label class="filter-label">Config Name</label>
+                <select class="filter-select" id="configFilter">
+                    <option value="">All Configs</option>
+                    {% for config in filter_options.config_names %}
+                    <option value="{{ config }}">{{ config }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Settings</label>
+                <select class="filter-select" id="settingsFilter">
+                    <option value="">All Settings</option>
+                    {% for setting in filter_options.settings %}
+                    <option value="{{ setting }}">{{ setting }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="filter-reset" id="resetFilters">Reset Filters</button>
+        </div>
+
+        <div class="records">
+            {% for record in records %}
+            <div class="record-card{% if record.corrected %} corrected{% endif %}"
+                 data-index="{{ loop.index0 }}"
+                 data-config="{{ record.config_name }}"
+                 data-settings="{{ record.settings }}">
+                <div class="prompt-section">
+                    <div class="prompt-label">Prompt</div>
+                    <div class="prompt-text">{{ record.prompt }}</div>
+                </div>
+                <div class="config-section">
+                    <div class="config-item">
+                        <span class="config-label">Config:</span>
+                        <span class="config-value">{{ record.config_name }}</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">Settings:</span>
+                        <span class="config-value settings-value">{{ record.settings }}</span>
+                    </div>
+                </div>
+                <div class="response-section">
+                    <div class="response-label">Steered Response</div>
+                    <div class="response-text">{{ record.steered_response }}</div>
+                </div>
+                <div class="record-footer">
+                    <label class="correction-toggle">
+                        <input type="checkbox"
+                               class="correction-checkbox"
+                               data-index="{{ loop.index0 }}"
+                               {% if record.corrected %}checked{% endif %}>
+                        <span class="correction-label">Mark as Corrected</span>
+                    </label>
+                    <span class="corrected-badge">Corrected</span>
+                    <span class="record-number">#{{ loop.index }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        const runType = "{{ run_type }}";
+        const runName = "{{ run_name }}";
+
+        // Filter functionality
+        const configFilter = document.getElementById('configFilter');
+        const settingsFilter = document.getElementById('settingsFilter');
+        const resetButton = document.getElementById('resetFilters');
+        const visibleCountEl = document.getElementById('visibleCount');
+        const recordCards = document.querySelectorAll('.record-card');
+
+        function applyFilters() {
+            const configValue = configFilter.value;
+            const settingsValue = settingsFilter.value;
+            let visibleCount = 0;
+
+            recordCards.forEach(card => {
+                const cardConfig = card.dataset.config;
+                const cardSettings = card.dataset.settings;
+
+                const matchesConfig = !configValue || cardConfig === configValue;
+                const matchesSettings = !settingsValue || cardSettings === settingsValue;
+
+                if (matchesConfig && matchesSettings) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            visibleCountEl.textContent = `(${visibleCount} visible)`;
+        }
+
+        configFilter.addEventListener('change', applyFilters);
+        settingsFilter.addEventListener('change', applyFilters);
+        resetButton.addEventListener('click', () => {
+            configFilter.value = '';
+            settingsFilter.value = '';
+            applyFilters();
+        });
+
+        // Correction checkbox functionality
+        document.querySelectorAll('.correction-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', async function() {
+                const index = parseInt(this.dataset.index);
+                const corrected = this.checked;
+                const card = this.closest('.record-card');
+
+                try {
+                    const response = await fetch(`/${runType}/run/${runName}/update_corrected`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ index, corrected }),
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        if (corrected) {
+                            card.classList.add('corrected');
+                        } else {
+                            card.classList.remove('corrected');
+                        }
+                    } else {
+                        // Revert checkbox on error
+                        this.checked = !corrected;
+                        console.error('Failed to update:', result.error);
+                    }
+                } catch (error) {
+                    // Revert checkbox on error
+                    this.checked = !corrected;
+                    console.error('Error updating corrected status:', error);
+                }
+            });
+        });
+
+        // Initial count update
+        applyFilters();
+    </script>
+</body>
+</html>
